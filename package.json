@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --env.prod"
+    "build": "webpack --env.production"
   },
   "dependencies": {
     "postcss-import": "^12.0.1",
