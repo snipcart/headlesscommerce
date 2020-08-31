@@ -35,7 +35,7 @@
         <div class="bg-white rounded-lg shadow-lg" v-for="({name, description, category}, index) in filteredEntries" :key="index">
           <div class="max-w-sm overflow-hidden">
             
-            <div :style="{backgroundColor: categories[category[0]].color}" class="px-3 py-2 rounded-t-lg">
+            <div :style="getColorForCat(category)" class="px-3 py-2 rounded-t-lg">
               <div class="font-bold text-xl text-gray-100 mb-2 mr-2">
                 {{name}}
               </div>
@@ -59,6 +59,7 @@ import dataset from './data'
 
 export default {
   setup() {
+    const categories = dataset.categories;
     const isToggled = ref(dataset.categories.map(x => true));
     const filters = computed(() => isToggled.value.reduce((acc, curr, i) => curr ? [...acc, i] : acc, []))
     const filteredEntries = computed(() => 
@@ -67,11 +68,16 @@ export default {
       ).sort(() => Math.random() - 0.5)
     )
 
+    const getColorForCat = (cat) => cat.length === 1
+      ? { backgroundColor: categories[cat[0]].color }
+      : { background: `linear-gradient(110deg, ${categories[cat[0]].color} 60%, ${categories[cat[1]].color} 60%)` }
+
     return {
       isToggled,
-      categories: dataset.categories,
+      categories,
       filteredEntries,
-      labels: dataset.tags
+      labels: dataset.tags,
+      getColorForCat
     }
   }
 }
