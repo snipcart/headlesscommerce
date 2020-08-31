@@ -53,7 +53,7 @@ export default {
             "category": [1]
         },
         {
-            "name": "Woo commerce",
+            "name": "WooCommerce",
             "description": "The most customizable platform for building your online business",
             "category": [1]
         },

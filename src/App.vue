@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="flex h-full flex-col items-center justify-center w-full mt-16 mb-16">
+  <div id="main" class="flex flex-col items-center justify-center w-full mt-12 mb-12">
     <div class="flex w-full">
       <div class="flex w-1/3 flex-col">
         <div class="p-6 mb-6 rounded-r-lg shadow-lg" :style="{backgroundColor: color}" v-for="({name, description, color, tags}, index) in categories" :key=index>
