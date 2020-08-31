@@ -1,6 +1,7 @@
 const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env = {}) => ({
   mode: env.prod ? 'production' : 'development',
@@ -8,7 +9,7 @@ module.exports = (env = {}) => ({
   entry: path.resolve(__dirname, './src/main.js'),
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/'
+    publicPath: '/'
   },
   resolve: {
     alias: {
@@ -55,6 +56,14 @@ module.exports = (env = {}) => ({
     ]
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'index.html', to: 'index.html' }
+      ],
+      options: {
+        concurrency: 100,
+      },
+    }),
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css'
