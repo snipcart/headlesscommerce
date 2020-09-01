@@ -33,8 +33,7 @@
 
       <div class="w-2/3 ml-12 mr-12 grid grid-cols-3 grid-rows-5 gap-3">
         <div class="bg-white rounded-lg shadow-lg" v-for="({name, description, cat}) in filteredEntries" :key=name>
-          <div class="max-w-sm overflow-hidden">
-            
+          <div>
             <div :style="getColorForCat(cat)" class="px-3 py-2 rounded-t-lg">
               <div class="font-bold text-xl text-gray-100 mb-2 mr-2">
                 {{name}}
