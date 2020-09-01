@@ -3,14 +3,14 @@
     <div class="flex w-full">
       <div class="flex w-1/3 flex-col">
         <div class="p-6 mb-6 rounded-r-lg shadow-lg" :style="{backgroundColor: color}" v-for="({name, description, color, tags}, index) in categories" :key=index>
-          <label :for=category class="flex flex-col cursor-pointer">
+          <label :for=name class="flex flex-col cursor-pointer">
             <div class="flex w-full justify-between">
               <div class="text-gray-100 font-bold text-lg">
                 {{name}}
               </div>
               
               <div class="ml-3 relative">
-                <input :id=category type="checkbox" checked class="hidden" @change="isToggled[index] = !isToggled[index]"/>
+                <input :id=name type="checkbox" checked class="hidden" @change="isToggled[index] = !isToggled[index]"/>
                 <div class="toggle__line w-10 h-4 bg-cus rounded-full shadow-inner"></div>
                 <div class="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0"></div>
               </div>
