@@ -32,10 +32,10 @@
       </div>
 
       <div class="w-2/3 ml-12 mr-12 grid grid-cols-3 grid-rows-5 gap-3">
-        <div class="bg-white rounded-lg shadow-lg" v-for="({name, description, category}, index) in filteredEntries" :key="index">
+        <div class="bg-white rounded-lg shadow-lg" v-for="({name, description, cat}) in filteredEntries" :key=name>
           <div class="max-w-sm overflow-hidden">
             
-            <div :style="getColorForCat(category)" class="px-3 py-2 rounded-t-lg">
+            <div :style="getColorForCat(cat)" class="px-3 py-2 rounded-t-lg">
               <div class="font-bold text-xl text-gray-100 mb-2 mr-2">
                 {{name}}
               </div>
@@ -61,16 +61,24 @@ export default {
   setup() {
     const categories = dataset.categories;
     const isToggled = ref(dataset.categories.map(x => true));
-    const filters = computed(() => isToggled.value.reduce((acc, curr, i) => curr ? [...acc, i] : acc, []))
-    const filteredEntries = computed(() => 
-      dataset.entries.filter(entry => 
-        filters.value.some(filter => entry.category.some(cat => cat === filter))
-      ).sort(() => Math.random() - 0.5)
+    
+    const filters = computed(() => 
+      isToggled.value
+        .reduce((acc, curr, i) => curr ? [...acc, i] : acc, [])
     )
 
-    const getColorForCat = (cat) => cat.length === 1
-      ? { backgroundColor: categories[cat[0]].color }
-      : { background: `linear-gradient(110deg, ${categories[cat[0]].color} 60%, ${categories[cat[1]].color} 60%)` }
+    const filteredEntries = computed(() => 
+      dataset.entries
+        .filter(entry => filters.value
+          .some(filter => entry.cat.some(cat => cat === filter)))
+        .sort(() => Math.random() - 0.5)
+    )
+
+    const getColorForCat = (cat) => {
+      return cat.length === 1
+        ? { backgroundColor: categories[cat[0]].color }
+        : { background: `linear-gradient(110deg, ${categories[cat[0]].color} 60%, ${categories[cat[1]].color} 60%)` }
+    }
 
     return {
       isToggled,
