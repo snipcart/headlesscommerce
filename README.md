@@ -1,26 +1,31 @@
-# vue-next-webpack-preview
+# Headless E-Commerce Solutions App (Built w/ Tailwind & Vue)
 
-> Minimal webpack setup for Vue 3 (beta) 
+![tailwind-vue-app](https://snipcart.com/media/205230/tailwind-vue-app.png)
 
-This is for preview purposes only. There might be bugs and undocumented behavior differences from v2, which are expected.
+**The premise**
 
-Also note that if you are using VSCode, Vetur isn't updated to take advantage of Vue 3's typing yet so intellisense in Vue files may not be fully functional (especially in templates).
+Last week, Snipcart was sponsoring Headless Commerce Summit, an event organized by Netlify. For a talk given by our CEO, François, we were trying to find a way to better visualize the difference between multiple headless e-commerce solutions. The opportunity was perfect for creating a Vue.js app and leveraging Tailwind CSS to make it visually appealing and easy to use quickly.
 
-### Prerequisites
-- Node & NPM
+[Here's the resulting app!](https://headlesscommerce.netlify.app/)
 
-### Install
-```sh
-npm install
-```
-### Usage
-##### Develop
-```sh
-# run dev server at localhost:8080
-npm run dev
-```
-##### Build
-```sh
-# transpile js for deployment
-npm run build
-```
+The headless e-commerce solutions featured in the app are placed in 4 categories, depending on their characteristics:
+
+- Monolithic
+- Add-on
+- Storefront
+- API
+
+We hope this app can help developers and merchants better understand the place of each of these e-commerce tools in the ecosystem. Feel free to add some by creating a pull request!
+
+## Tailwind & Vue tutorial & demo
+
+We wrote a blog post to show how to set up Tailwind in a Vue.js app. Here's what it covers:
+
+- Generating a Vue 3 app
+- Setting up Tailwind CSS
+- Defining data to play with Tailwind
+- Pushing the configuration further
+
+Read the tutorial [here](https://snipcart.com/blog/tailwind-vue-tutorial).
+
+Cheers!
