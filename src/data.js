@@ -101,6 +101,11 @@ export default {
             "name": "Nacelle",
             "description": "The framework for building lightning-fast storefronts using Headless Progressive Web App technology",
             "cat": [3]
+        },
+        {
+            "name": "Saleor",
+            "description": "The world’s fastest growing open-source ecommerce platform with billions of dollars transacted. Powered by Python, GraphQL, React and PWA",
+            "cat": [3, 2]
         }
     ]
 }
