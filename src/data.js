@@ -83,6 +83,11 @@ export default {
             "cat": [2]
         },
         {
+            "name": "React Storefront",
+            "description": "Lightning fast, open source eCommerce PWA built on the best of React and Next.js",
+            "cat": [2]
+        },
+        {
             "name": "Front-Commerce",
             "description": "Build delightful eCommerce shops with the technologies of 2020 without the hassle of keeping them up-to-date!",
             "cat": [2]
