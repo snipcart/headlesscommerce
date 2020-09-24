@@ -1,5 +1,5 @@
 <template>
-<div class="divide-y-1 divide-gray-500 divide-solid">
+<div>
     <div id="main" class="flex flex-col items-center justify-center w-full mt-8">
       <span class="font-semibold text-2xl tracking-tight text-gray-700 mb-8">Headless & coupled e-commerce solutions</span>
       
