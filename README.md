@@ -6,6 +6,8 @@
 
 Snipcart was a sponsor at [Headless Commerce Summit](https://headlesscommercesummit.com/), an event organized by Netlify. Our CEO François gave a lightning talk titled [Does Snipcart have a head?](https://www.youtube.com/watch?v=9WB8OXZnH4k)
 
+The talk was also converted into a fully fledged [developer guide to headless e-commerce](https://snipcart.com/blog/headless-ecommerce-guide).
+
 For this talk, we needed a way to better visualize differences between headless & coupled e-commerce solutions. We had wanted to experiment with Vue + Tailwind CSS for a while, so we did.
 
 [Here's the resulting app!](https://headlesscommerce.netlify.app/)
