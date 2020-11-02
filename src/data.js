@@ -127,6 +127,11 @@ export default {
             "name": "Webflow E-Commerce",
             "description": "Webflow is the way to design, build, and launch powerful websites visually — without coding",
             "cat": [0]
+        },
+        {
+            "name": "CartQL",
+            "description": "GraphQL Shopping Cart and Checkout API",
+            "cat": [3]
         }
     ]
 }
