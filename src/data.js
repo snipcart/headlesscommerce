@@ -111,6 +111,22 @@ export default {
             "name": "Saleor",
             "description": "The world’s fastest growing open-source ecommerce platform with billions of dollars transacted. Powered by Python, GraphQL, React and PWA",
             "cat": [3, 2]
+        },
+        
+        {
+            "name": "Slatwall",
+            "description": "Slatwall is a modern eCommerce platform that combines enterprise features with headless commerce flexibility",
+            "cat": [0, 1, 3]
+        },
+        {
+            "name": "Swell",
+            "description": "Swell is the most powerful headless ecommerce platform for modern brands, startups, and agencies",
+            "cat": [3, 2]
+        },
+        {
+            "name": "Webflow E-Commerce",
+            "description": "Webflow is the way to design, build, and launch powerful websites visually — without coding",
+            "cat": [0]
         }
     ]
 }

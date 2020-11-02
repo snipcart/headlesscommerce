@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "start": "webpack-dev-server",
     "dev": "webpack-dev-server",
     "build": "webpack --env.prod"
   },

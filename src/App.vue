@@ -85,6 +85,37 @@ export default {
     )
 
     const getColorForCat = (cat) => {
+      if(cat.length === 1){
+        return { backgroundColor: categories[cat[0]].color }
+      }
+
+      const leftmostRatio = 60;
+      
+      let gradientString = 'linear-gradient(110deg, '
+      const pctStep = Math.round((100 - leftmostRatio) / (cat.length -1));
+      let pctPrev = 0
+
+      for (let index = 0; index < cat.length; index++) {
+        const categoryIndex = cat[index];
+        const pct = index === 0 ? leftmostRatio : (leftmostRatio + (index * pctStep));
+
+        if(index === 0){
+          gradientString += `${categories[categoryIndex].color} ${pct}%`
+        }
+        else{
+          gradientString += `, ${categories[categoryIndex].color} ${pctPrev}%`
+          gradientString += `, ${categories[categoryIndex].color} ${pct}%`
+        }
+
+        pctPrev = pct;  
+      }
+
+      gradientString += ')'      
+
+      console.log(gradientString)
+
+      return { background: gradientString };
+
       return cat.length === 1
         ? { backgroundColor: categories[cat[0]].color }
         : { background: `linear-gradient(110deg, ${categories[cat[0]].color} 60%, ${categories[cat[1]].color} 60%)` }
