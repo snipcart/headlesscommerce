@@ -2,25 +2,25 @@ export default {
     "tags": ["Content Management", "Product Management", "Store Management", "Cart & Checkout", "Website Design"],
     "categories": [
         {
-            name: "Monolith",
+            name: "Monolith", // 0
             description: "All-in-one, turnkey solutions to build and run online stores",
             tags: [0, 1, 2, 3, 4],
             color: "#264653"
         },
         {
-            name: "Add-On",
+            name: "Add-On", // 1
             description: "Cart and checkout layer to enable sales on existing sites. Includes back-office",
             tags: [1, 2, 3],
             color: "#2a9d8f"
         },
         {
-            name: "Storefront",
+            name: "Storefront", // 2
             description: "Frontend-centric tooling to design fast & performant storefronts",
             tags: [3, 4],
             color: "#f4a261"
         },
         {
-            name: "API",
+            name: "API", // 3
             description: "E-commerce building blocks to create custom online stores",
             tags: [1, 2],
             color: "#e76f51"
@@ -131,6 +131,11 @@ export default {
         {
             "name": "CartQL",
             "description": "GraphQL Shopping Cart and Checkout API",
+            "cat": [3]
+        },
+        {
+            "name": "Vendure",
+            "description": "An open-source headless ecommerce framework built on GraphQL, Node & TypeScript",
             "cat": [3]
         }
     ]
