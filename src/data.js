@@ -48,6 +48,11 @@ export default {
             "cat": [0]
         },
         {
+            "name": "Shoprocket",
+            "description": "Sell from your existing website, social media and more, in minutes",
+            "cat": [1]
+        },
+        {
             "name": "Snipcart",
             "description": "Easy, flexible e-commerce for developers",
             "cat": [1]
